@@ -3,7 +3,7 @@ class RecintosZoo {
         this.recintos = [
             { numero: 1, bioma: 'savana', tamanho: 10, ocupacao: 3, animais: ['MACACO', 'MACACO', 'MACACO'] },
             { numero: 2, bioma: 'floresta', tamanho: 5, ocupacao: 0, animais: [] },
-            { numero: 3, bioma: ['savana', 'rio'], tamanho: 7, ocupacao: 2, animais: ['GAZELA'] }, // Biomas compostos como array
+            { numero: 3, bioma: ['savana', 'rio'], tamanho: 7, ocupacao: 2, animais: ['GAZELA'] },
             { numero: 4, bioma: 'rio', tamanho: 8, ocupacao: 0, animais: [] },
             { numero: 5, bioma: 'savana', tamanho: 9, ocupacao: 3, animais: ['LEAO'] }
         ];
@@ -34,7 +34,7 @@ class RecintosZoo {
         
         this.recintos.forEach(recinto => {
             const espacoDisponivel = recinto.tamanho - recinto.ocupacao;
-            // Corrigido: Considera espaço extra apenas se houver outras espécies no recinto
+            //Considera espaço extra apenas se houver outras espécies no recinto
             const espacoNecessario = (animal.tamanho * quantidade) +
                 (recinto.animais.length > 0 && !recinto.animais.every(a => a === tipoAnimal) ? 1 : 0);
 
